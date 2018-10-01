@@ -5,6 +5,7 @@ public class User {
 	private int id;
 	private String firstName;
 	private String lastName;
+	private int age;
 	
 	
 	public User() {
@@ -12,11 +13,12 @@ public class User {
 	}
 
 
-	public User(int id, String firstName, String lastName) {
+	public User(int id, String firstName, String lastName, int age) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.setAge(age);
 	}
 
 
@@ -47,6 +49,16 @@ public class User {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public void setAge(int age) {
+		this.age = age;
 	}
 	
 	

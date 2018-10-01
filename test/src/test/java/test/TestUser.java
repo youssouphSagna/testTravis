@@ -1,6 +1,7 @@
 package test;
 
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
@@ -13,7 +14,7 @@ public class TestUser {
 	@Before
 	public void init() {
 		
-		sut = new User(1, "SAGNA", "YOUSS");
+		sut = new User(1, "SAGNA", "YOUSS", 25);
 		
 	}
 	
@@ -23,6 +24,8 @@ public class TestUser {
 		assertTrue(sut.getFirstName().equals("SAGNA"));
 		assertTrue(sut.getId() == 1);
 		assertTrue(sut.getLastName().equals("YOUSS"));
+		
+		assertFalse(sut.getAge() == 24);
 		
 	}
 
